@@ -1,9 +1,14 @@
-import { useState } from "react";
+import { useEffect, useState } from 'react';
 
-import "./styles/app.css";
+import './styles/app.css';
+import { useTypedDispatch } from './redux/hooks';
+import { selectValue, testAction } from './redux/testReducer';
 
 function App() {
-  const [count, setCount] = useState(0);
+  const dispatch = useTypedDispatch();
+  useEffect(() => {
+    dispatch(testAction());
+  }, []);
 
   return (
     <main>
