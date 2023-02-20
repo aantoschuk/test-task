@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+:root {
+ --dim-gray: #726E75; 
+}
+
+body {
+  color: var(--dim-gray);
+  background-color: black;
+}
