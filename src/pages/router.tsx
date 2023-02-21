@@ -1,14 +1,17 @@
 import { createBrowserRouter } from 'react-router-dom';
+
+import { PATH } from '@/constants/path';
+
 import App from './app/App';
 import Posts from './posts/Posts';
 
 export const router = createBrowserRouter([
   {
-    path: '/',
+    path: PATH.home,
     element: <App />,
   },
   {
-    path: '/posts',
+    path: PATH.posts,
     element: <Posts />,
   },
 ]);

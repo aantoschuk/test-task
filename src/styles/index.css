@@ -11,6 +11,30 @@ html, body, #root, main {
  --snow: #FCF7F8; 
 }
 
+a {
+  position: relative;
+  text-decoration: none;
+  color: var(--dim-gray);
+  transition: 0.2s;
+}
+
+a::after {
+  position: absolute;
+  content: " ";
+  width: 70%;
+  height: 3px;
+  top: 100%;
+  left: 0;
+  background: yellow;
+  transition: transform 0.5s;
+  transform: scaleX(0);
+  transform-origin: right;
+}
+a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
 body {
   color: var(--dim-gray);
   background-color: black;

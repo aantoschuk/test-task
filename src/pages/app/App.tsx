@@ -1,12 +1,12 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 
-import { fetchUsers } from '@/redux/reducers/userReducer';
-
+import { fetchUsers } from '@/redux/user/actions';
 import { useTypedDispatch, useTypedSelector } from '@/redux/hooks';
 
-import './app.css';
 import { UserList } from './components';
+
+import './app.css';
 
 function App() {
   const dispatch = useTypedDispatch();
@@ -15,6 +15,11 @@ function App() {
   useEffect(() => {
     dispatch(fetchUsers());
   }, [dispatch]);
+
+  // when errors happens (promise rejected), user will see that message + error message
+  if (usersState.error) {
+    return <h1>There are error: {usersState.error}</h1>;
+  }
 
   return (
     <main>

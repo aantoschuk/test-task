@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit'
 
-import { TRootState } from '../store';
+import { TRootState } from './store';
 
 interface ITestReducerState {
   value: string;
