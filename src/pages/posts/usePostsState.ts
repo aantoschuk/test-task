@@ -1,14 +1,11 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 
-interface IUserPostsState {
-  userId: string | undefined
-}
 /**
  * @param { number } userId
  * @returns array of posts written by user
  */
-export const usePostsState = (props: IUserPostsState) => {
+export const usePostsState = (props: IUseIdProps) => {
   const { userId } = props;
 
   const [posts, setPosts] = useState<IPost[]>([]);

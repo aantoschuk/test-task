@@ -16,7 +16,6 @@
 .user-item {
   font-size: 1.2rem;
   font-weight: bold;
-  cursor: pointer;
   display: grid;
   grid-template-columns: 2.5fr 0.5fr 0.5fr;
   column-gap: 30px;
@@ -38,6 +37,7 @@
     font-size: 14px;
   }
 }
+
 @media only screen and (max-width: 320px ){
   .users-container {
     width: 100%;

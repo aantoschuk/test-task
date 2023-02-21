@@ -30,3 +30,9 @@ interface IPost {
   title: string;
   userId: number;
 };
+
+interface IUseIdProps {
+  userId: number;
+}
+
+type TAlbum = Omit<IPost, 'body'>;
