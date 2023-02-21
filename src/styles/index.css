@@ -3,15 +3,57 @@
   padding: 0;
 }
 
-html, body {
+html, body, #root, main {
   height: 100%;
 }
-
 :root {
  --dim-gray: #726E75; 
+ --snow: #FCF7F8; 
 }
 
 body {
   color: var(--dim-gray);
   background-color: black;
 }
+
+h1 {
+  margin-bottom: 50px;
+  font-size: 2.9rem;
+  color: var(--snow);
+}
+
+ul, li {
+  list-style-type: none;
+}
+
+button {
+  color: var(--dim-gray);
+  background: none;
+  cursor: pointer;
+  transition: 0.25s;
+  border: 2px solid #FFF94F;
+  font: inherit;
+  line-height: 1;
+  margin: 0.5em;
+  padding: 10px 15px;
+}
+
+.raise:hover,
+.raise:focus {
+  box-shadow: 0 0.5em 0.5em -0.4em #FFF94F;
+  transform: translateY(-0.25em);
+  color: #C5E4B4;
+}
+
+button:hover {
+  color: var(--snow);
+}
+
+@media only screen and (max-width: 320px ){
+  ul {
+    padding-top: 20px;
+  }
+  ul, li {
+    width: 100%;
+  }
+} 
